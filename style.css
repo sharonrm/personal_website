@@ -36,8 +36,8 @@ header {
 .container2 {
 	display: flex;
 	justify-content: space-around;
-	width: 90vw;
-	height: 90vh;
+	width: 150vw;
+	height: 150vh;
 	
 }
 
@@ -45,9 +45,9 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	height: 400px;
-	width: 70vw;
-	background-color: #FAFAFA;
+	height: 1000px;
+	width: 80vw;
+	background-color: black;
 	
 }
 
@@ -58,10 +58,10 @@ header {
 	font-size: 18px
 	
 }
-.p1 {
+img {
 	
-	width: 170px;
-	height:200px;
+	width: 350px;
+	height:250px;
 	background-color: black;
 	
 }
