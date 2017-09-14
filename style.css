@@ -8,7 +8,7 @@ body {
 header {
 	width: 100vw;
 	height: 15vh;
-	background-color: #4bcbcc;
+	background-color:  #F0F0F0;
     text-align: center;
     box-shadow: ;
 }
@@ -22,8 +22,8 @@ header {
 	align-items:center;
 	flex-direction: column; 
 	width: 100vw;
-	height: 300vh;
-	background-color: #b2ebf2;
+	height: 500vh;
+	background-color: #FFFFFF;
 }
 .title {
 	text-align: center;
@@ -34,23 +34,34 @@ header {
 }
 
 .container2 {
-	display: flex;
-	justify-content: space-around;
-	width: 150vw;
-	height: 150vh;
-	
+	width: 60%;
+	height: 80%;
+	background-color: #F0F0F0;
 }
 
 .projects {
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
-	height: 1000px;
-	width: 80vw;
-	background-color: black;
+	justify-content: center;
+	/*height: 80%;
+	width: 60vw;*/
+	flex-direction: column;
+}
+ #content {
+ 	display: none;
+ 	opacity : 0;
 	
 }
-
+.p1:hover #content {
+	display: block;
+	text-align: center;
+	opacity : 1;
+}
+.p2:hover #content {
+	display: block;
+	text-align: center;
+	opacity : 1;
+}
 
 .description{
 	margin-left: 170px;
@@ -60,17 +71,51 @@ header {
 }
 img {
 	
-	width: 350px;
-	height:250px;
-	background-color: black;
+	width: 700px;
+	height:500px;
+	margin-bottom: 20px;
+	margin-top: 40px;
 	
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:active {
+    text-decoration-color: none;
+}
+a:hover {
+    color: black;
+}
+#tog {
+	color: white;
+	font-size: 24;
+    display: none;
+    background-color: rgba(86, 86, 86, 0.68);
+    display: block;
+    height: 50px;
+    width: 400px;
+    margin: 0 auto;
+  	padding: 10px 10px;
+}
+#tog2 {
+	color: white;
+	font-size: 24;
+    display: none;
+    background-color: rgba(86, 86, 86, 0.68);
+    display: block;
+    height: 70px;
+    width: 450px;
+    margin: 0 auto;
+  	padding: 10px 10px;
 }
 
 .divider {
 	text-align: center;
 	height: 70px;
 	width: 100vw;
-	background-color: #84ffff;
+	background-color: #F0F0F0;
 	font-family: 'Lato', sans-serif;
 	letter-spacing: 2px;
 	font-size: 30px;
