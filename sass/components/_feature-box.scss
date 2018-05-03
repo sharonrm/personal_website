@@ -1,0 +1,51 @@
+.feature {
+	position: relative;
+	height: 40rem;
+}
+
+.feature-box {
+	height: 40rem;
+	width: 27rem;
+	/*margin-top: 3rem;*/
+	top: 0;
+	left: 0;
+	background-color: rgba($color-white, 10%);
+	font-size: 1.5rem;
+	text-align: center;
+	border-radius: 3px;
+	box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+	position: absolute;
+	overflow: hidden;
+
+	&__text{
+	  margin-top: 3rem;
+	}
+
+	
+
+	.feature-box-picture {
+				background-size: cover;
+				height: 23rem;
+				width: 100%;
+				position: absolute;
+				margin: 0 auto;
+
+				
+			&--1{
+				background-image: url(../img/game.png);
+				}
+
+			&--2{
+				background-image: url(../img/simovi.png);
+			}
+
+			&--3{
+				background-image: url(../img/emote.png);
+			}
+
+			&--4{
+				background-image: url(../img/project-3.png);
+			}
+
+		}
+}

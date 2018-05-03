@@ -1,0 +1,19 @@
+.container {
+	height: 100vh;
+	width: 50vw;
+	background-color: $color-primary;
+	position: relative;
+
+	&--text{
+		position: absolute;
+		top: 0;
+		right: 0;
+		}
+
+	p{
+		color: $color-white;
+		font-size: 2em;
+		padding-top: 2em;
+	}
+}
+	

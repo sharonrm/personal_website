@@ -1,0 +1,95 @@
+.composition {
+	height: 100%;
+	position: relative;
+	width: 100%;
+	background-color: $color-primary;
+
+	&__photo {
+		font-size: 2em;
+		width: 100%;
+		/*box-shadow: 0 1.5rem .4rem rgba($color-primary, .4);*/
+		border-radius: 2px;
+		position: absolute;
+		top:0;
+		left:0;
+		/*transition: all .2s;*/
+		border: 1px solid $color-white;
+	
+		height: 23rem;
+		background-blend-mode: screen;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+
+		&--p1 {	
+			background-size: cover;
+            height: 23rem;
+			background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/w2g.png);
+			left: 0;
+			bottom: 5rem;
+			
+			
+		}
+
+		.composition__heading {
+			font-size: 2.8rem;
+			font-weight: 300;
+			text-transform: uppercase;
+			text-align: right;
+			color: $color-white;
+			position: absolute;
+			top: 12rem;
+			right: 2rem;
+			width: 75%;
+
+			&-span {
+				padding: 1rem 1.5rem;
+				-webkit-box-decoration-break: clone;
+				box-decoration-break: clone;
+			}
+		}
+
+		&--p2 {
+			left: 33.5%;
+			top: 5rem;
+			display: none;
+		}
+
+		&--p3 {
+			right: 0;
+			bottom: 5rem;
+			display: none;
+		}
+
+		&--p4 {
+			left: 0;
+			top: 5rem;
+			display: none;
+		}
+
+		&--p5 {
+			right: 0rem;
+			top: 5rem;
+			display: none;
+
+		}
+
+		&--p6 {
+			right: 33.5%;
+			bottom: 5rem;
+			display: none;
+		}
+
+		&:hover {
+			box-shadow: 0 2.5 4rem rgba($color-black, .5);
+		}
+
+		}
+			
+				&:hover &__photo:not(:hover){
+		
+	}
+	
+
+	}

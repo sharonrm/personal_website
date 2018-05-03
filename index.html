@@ -2,70 +2,200 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <script src = "baffle.min.js" type = "text/javascript"></script>
+    <link rel="stylesheet" href="motion.min.css">
     <script type="text/javascript" src="script.js"></script>
     <title>Sharon Moskal</title>
 </head>
 
 <body>
-    <header></header>
-    <div id='container1'>
-
-        <div class='title'>
-            <h1 class = "container1 animated rotateIn">Sharon Moskal</h1>
-            <p class = "baffle">Coder  Mom  Nerd  </p>
-        </div>
-        <div class='description'>
-            <p>Creative web design with an emphasis on fashion and jewelry brands using a variety of front-end and back-end technologies including Javascript, Jquery, Ruby on Rails, Node/Express and Liquid. </p>
-        </div>
-        <div class="divider">
-            <span>PROJECTS</span>
-        </div>
-    </div>
-        <div class='container2'>
-            <div class='projects'>
-                <div class='column1'> 
-                    <img id = "boxshadow" src="gamepic.png" alt="gamepic"> 
-                    <img id = "boxshadow" src="project-2.png" alt="project-2">
-                    <img id = "boxshadow" src="project-3.png" alt="project-3">
+            <section class="section-about">
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <div class="projects">
+                            <h1 class = "heading-primary--main">Sharon Moskal</h1>
+                            <div class="projects-sub projects-sub--about-me">
+                                <a href="#" class="project-heading--link btn-text btn-about">About Me &rarr; </a>
+                            </div>
+                         </div>
+                         <div class="col-1-of-2">
+                            <div class="container container--text">
+                                <p class="paragraph"></p>
+                            </div>
+                        </div>
+             </section>       
+               
+            <section class="section-projects">
+                <div class="projects-sub">
+                     <div class="u-center-text u-margin-bottom-big">
+                            <h2 class="heading-secondary">Clients</h2>
+                     </div>
                 </div>
-      
-            <div id='content'> 
-                    <div class='column2' id = 'tog'> 
-                        <a href ="https://git.generalassemb.ly/sharon/Project-1-Connect-4">
-                            <h3 class="project-title">Match 4</h3></a>
-                            <h5>Javascript | Jquery | HTML | CSS</h5>
-                            <p> Matching Game </p>
-                    </div>
-                    <div class = 'column2' id='tog2'> 
-                        <a href="https://github.com/sharonrm/project_2">
-                            <h3 class="project-title">Simovi</h3></a> 
-                           <h5>Node.js | Express | PG Promise, Axios | SQL | HTML/CSS | IMDB API</h5>
-                            <p>Movie Suggestion App</p>
-                    </div>
-                    <div class = 'column2' id='tog3'> 
-                        <a href="https://github.com/sharonrm/project_2">
-                            <h3 class="project-title">Ment</h3>
-                            <h5>Ruby on Rails | Postgres | Bycrypt | HTTParty | PSQL | HTML | CSS</h5>
-                            <p>Mentoring App </p></a>
-                    </div>
+                <div class="row">
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture
+                                        card__picture--1">
+                                            &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--1"> The Frock NYC</span>
+                                </h4>
+                                <div class="card__details">
+                                           <ul>
+                                               <li>Shopify</li>
+                                               <li>Liquid</li>
+                                               <li>Javascript</li>
+                                               <li>Sass</li>
+                                               <li></li>
+                                           </ul>
+                                        </div>
+                                </div>
+                                    <div class="card__side card__side--back card__side--back-1">
+                                        <div class="card__cta">
+                                            <div class="card__link-box">
+                                                <a href="https://thefrocknyc.com/" class="btn btn--white">thefrocknyc.com</a>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                 </div>
+                               </div>
+                                <div class="col-1-of-3">
+                                    <div class="card">
+                                        <div class="card__side card__side--front">
+                                            <div class="card__picture
+                                        card__picture--2">
+                                            &nbsp;
+                                            </div>
+                                        <h4 class="card__heading">
+                                        <span class="card__heading-span card__heading-span--2"> Wheels to go</span>
+                                        </h4>
+                                        <div class="card__details">
+                                           <ul>
+                                               <li>Wordpress</li>
+                                               <li>CSS</li>
+                                               <li>Javascript</li>
+                                           </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card__side card__side--back card__side--back-1">
+                                        <div class="card__cta">
+                                            <div class="card__link-box">
+                                                <a href="http://w2g.nyc/" class="btn btn--white">w2g.com</a>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                 </div>
+                               </div>
+                               <div class="col-1-of-3">
+                                    <div class="card">
+                                        <div class="card__side card__side--front">
+                                            <div class="card__picture
+                                        card__picture--3">
+                                            &nbsp;
+                                            </div>
+                                            <h4 class="card__heading">
+                                            <span class="card__heading-span card__heading-span--3">Mink Jewelers</span>
+                                            </h4>
+                                        <div class="card__details">
+                                           <ul>
+                                               <li>Shopify</li>
+                                               <li>Liquid</li>
+                                               <li>Javascript</li>
+                                               <li>Sass</li>
+                                           </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card__side card__side--back card__side--back-3">
+                                        <div class="card__cta">
+                                            <div class="card__link-box">
+                                                <a href="https://thefrocknyc.com/" class="btn btn--white">https://www.minkjewelers.com/</a>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                 </div>
+                                </div>
+                            </div>
+                </section>
+    <section class="section-apps">
+        <div class="projects-sub">
+            <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-tertiary">Web Apps</h2>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-4">
+                <div class="feature">
+                    <div class="feature-box">
+                      <div class="feature-box-picture feature-box-picture--1 ">
+                      </div>
+                      <h3 class="heading-feature-box u-margin-bottom-small">Match 4</h3>
+                     <a href ="https://git.generalassemb.ly/pages/sharon/Project-1-Connect-4/"></a>
+                     <p class="feature-box__text">
+                 Matching game - Javascript | Jquery | HTML | CSS
+                    </p>
+                    </div>
+                </div>
             </div>
-         
-    </div>
+            <div class="col-1-of-4">
+                <div class="feature">
+                    <div class="feature-box">
+                      <div class="feature-box-picture feature-box-picture--2 ">
+                      </div>
+                      <h3 class="heading-feature-box u-margin-bottom-small">Simovi</h3>
+                     <a href="https://stunning-bryce-canyon-74350.herokuapp.com/"></a>
+                     <p class="feature-box__text">
+                 Movie suggestion app - Node.js | Express | PG Promise, Axios | SQL | HTML/CSS | IMDB API
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1-of-4">
+                <div class="feature">
+                    <div class="feature-box">
+                      <div class="feature-box-picture feature-box-picture--3 ">
+                      </div>
+                      <h3 class="heading-feature-box u-margin-bottom-small">Match 4</h3>
+                    <a href ="https://github.com/sharonrm/Final-Project/tree/master/server/">
+                    <a href="https://github.com/sharonrm/view-final-project" class=""></a>
+                     <p class="feature-box__text">
+                    Emotional Content Analysis - Node.js | React | Watson API | SQL | CSS
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1-of-4">
+                <div class="feature">
+                    <div class="feature-box">
+                      <div class="feature-box-picture feature-box-picture--4 ">
+                      </div>
+                      <h3 class="heading-feature-box u-margin-bottom-small">Ment-Mentoring App</h3>
+                     <a href="https://github.com/sharonrm/project_2"></a>
+                     <p class="feature-box__text">
+                 Emotional Content Analysis -Ruby on Rails | Postgres | Bycrypt | HTTParty | PSQL | HTML | CSS
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+ 
        <div id='container3'>
             <div>
                 <footer>
-                    <h2>Interested in collaborating?</h2>
+                    <h2>Need a web developer? I can build, update or restyle your current website!</h2>
                     <form action="mailto:sharonmoskal@gmail.com">
                         <input type="submit" id = "submit" name="send" value="GET IN TOUCH"/>
                     </form>
                     <div id = "social">
-                        <a href = "https://www.linkedin.com/in/sharon-moskal-nyc/" target="_blank"> 
+                        <a href = "https://www.linkedin.com/in/sharon-moskal-nyc/" target="_blank"></a> 
                         <img id = "social-lkd" src="linkedin1600.png" alt="linkin"> </a>
                          <a href = "https://github.com/sharonrm?tab=repositories" target="_blank">
                        <img id = "social-git" src="mark-github.png" alt="github"> </a>
@@ -75,7 +205,8 @@
             </div>
         </div>
 
-  
+                                                                
 </body>
+
 
 </html>
