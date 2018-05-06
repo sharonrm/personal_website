@@ -30,18 +30,19 @@ body {
 .heading-tertiary {
     font-size: 4rem;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 700;
     color: $color-grey-light-1;
     -webkit-background-clip: text;
     letter-spacing: .3rem;
     transition: all .2s;
     text-align: center; 
     margin-top: -6rem;
-
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .heading-feature-box {
-    font-size: 3rem;
     text-transform: uppercase;
     font-weight: 300;
     margin-top: 25rem;
@@ -49,7 +50,7 @@ body {
     -webkit-background-clip: text;
     letter-spacing: .3rem;
     transition: all .2s;
-    text-align: center; 
+    
     
 }
 

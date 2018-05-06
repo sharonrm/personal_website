@@ -1,11 +1,11 @@
 .feature {
 	position: relative;
-	height: 40rem;
+	height: 24rem;
 }
 
 .feature-box {
-	height: 40rem;
-	width: 27rem;
+	height: 24rem;
+	width: 24rem;
 	/*margin-top: 3rem;*/
 	top: 0;
 	left: 0;
@@ -18,18 +18,64 @@
 	overflow: hidden;
 
 	&__text{
-	  margin-top: 3rem;
-	}
+	   	font-size: 1.5rem;
+    	width: 24rem;
+    	height: 24rem;
+    	float: left;
+    	background-size: 100%;
+    	transition: 0.5s;
+    	text-align: center;
+    	margin-left: 2rem;
+
+		}
 
 	
 
 	.feature-box-picture {
-				background-size: cover;
-				height: 23rem;
+				background-size: 100%;
+				background-repeat: no-repeat;
+				height: 24rem;
 				width: 100%;
-				position: absolute;
-				margin: 0 auto;
+				position: relative;
+				float: left;
 
+				&:hover {
+				background-size: 115%;
+
+				&:after{
+					content: attr(data-text);
+					position: absolute;
+					top: 90%;
+					bottom: 0;
+					left: 0;
+					right:0;
+					overflow: hidden;
+					background-color: rgba($color-grey-light-3, .80);
+					opacity: 0;
+					transition: .5s;
+					color: $color-black;
+			
+				}
+
+				&:hover:after{
+					opacity: 1;
+					top: 0;
+					padding: .7rem;
+
+				}
+
+				&:first-line{
+					color: $color-black;
+					font-weight: bold;
+					font-size: 300%;
+					float: left;
+				}
+
+				&:second-line{
+					font-weight: bold;
+					font-size: 2rem;
+				}
+		}
 				
 			&--1{
 				background-image: url(../img/game.png);
