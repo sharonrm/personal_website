@@ -11,9 +11,14 @@ $(document).ready(() => {
 
 	$(".type").typed({
 		strings:[
-		"Web developer with an emphasis on fashion and jewelry brands. I use a variety of technologies including Javascript, Jquery, React, Node/Express and Sass."
+		"Web developer with an emphasis on fashion and jewelry brands.",
+		 "I use a variety of technologies including Javascript, Jquery, React, Node/Express and Sass.",
+		 "Check out a few of my current clients below.",
+		 " "
 		],
-		typeSpeed: 80
+		typeSpeed: 10,
+		backdelay: 200,
+		loop: true
 	})
 		
 	})

@@ -127,7 +127,7 @@ body {
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
-  color: #9EACCC;
+  color: #22252c;
   display: inline-block;
   text-decoration: none;
   border-bottom: 1px solid #22252C;
@@ -310,70 +310,57 @@ so we add height to both.*/
 .feature {
   position: relative;
   height: 24rem; }
-
-.feature-box {
-  height: 24rem;
-  width: 24rem;
-  /*margin-top: 3rem;*/
-  top: 0;
-  left: 0;
-  background-color: white;
-  font-size: 1.5rem;
-  text-align: center;
-  border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(34, 37, 44, 0.15);
-  position: absolute;
-  overflow: hidden; }
-  .feature-box__text {
-    font-size: 1.5rem;
+  .feature-box {
+    height: 24rem;
     width: 24rem;
-    height: 24rem;
-    float: left;
-    background-size: 100%;
-    transition: 0.5s;
+    top: 0;
+    left: 0;
+    background-color: white;
+    font-size: 1.5rem;
     text-align: center;
-    margin-left: 2rem; }
-  .feature-box .feature-box-picture {
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 24rem;
-    width: 100%;
-    position: relative;
-    float: left; }
-    .feature-box .feature-box-picture:hover {
-      background-size: 115%; }
-      .feature-box .feature-box-picture:hover:after {
-        content: attr(data-text);
-        position: absolute;
-        top: 90%;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        overflow: hidden;
-        background-color: rgba(252, 252, 255, 0.8);
-        opacity: 0;
-        transition: .2s;
-        color: #22252c; }
-      .feature-box .feature-box-picture:hover:hover:after {
-        opacity: 1;
-        top: 0;
-        padding: .7rem; }
-      .feature-box .feature-box-picture:hover:first-line {
-        color: #22252c;
-        font-weight: bold;
-        font-size: 300%;
-        float: left; }
-      .feature-box .feature-box-picture:hover:second-line {
-        font-weight: bold;
-        font-size: 2rem; }
-    .feature-box .feature-box-picture--1 {
-      background-image: url(../img/game.png); }
-    .feature-box .feature-box-picture--2 {
-      background-image: url(../img/simovi.png); }
-    .feature-box .feature-box-picture--3 {
-      background-image: url(../img/emote.png); }
-    .feature-box .feature-box-picture--4 {
-      background-image: url(../img/project-3.png); }
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(34, 37, 44, 0.15);
+    position: absolute;
+    overflow: hidden; }
+    .feature-box-picture {
+      background-size: 100%;
+      background-repeat: no-repeat;
+      height: 24rem;
+      width: 100%;
+      position: relative; }
+      .feature-box-picture:hover {
+        background-size: 115%; }
+        .feature-box-picture:hover::after {
+          position: absolute;
+          top: 100%;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 0 .7rem;
+          overflow: hidden;
+          background-color: rgba(34, 37, 44, 0.9);
+          color: #fff;
+          content: attr(data-text); }
+        .feature-box-picture:hover:hover:after {
+          top: 0;
+          padding: .7rem;
+          background-color: rgba(34, 37, 44, 0.6); }
+        .feature-box-picture:hover:first-line {
+          color: #fff;
+          font-weight: bold;
+          font-size: 300%;
+          float: left; }
+        .feature-box-picture:hover:second-line {
+          font-weight: bold;
+          font-size: 2rem; }
+      .feature-box-picture--1 {
+        background-image: url(../img/game.png); }
+      .feature-box-picture--2 {
+        background-image: url(../img/simovi.png); }
+      .feature-box-picture--3 {
+        background-image: url(../img/emote.png); }
+      .feature-box-picture--4 {
+        background-image: url(../img/project-3.png); }
 
 .social-box {
   margin: 5rem 0rem 0 10rem; }
