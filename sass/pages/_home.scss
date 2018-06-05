@@ -7,6 +7,7 @@
 	clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100% );
 
 	@include respond(tab-port){
+		-webkit-clip-path: none;
 		clip-path: none;
 		margin-top: 0;
 		background-color: $color-primary;
@@ -34,6 +35,7 @@
 	clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
 
 	@include respond(tab-port) {
+		-webkit-clip-path: none;
 		clip-path: none;
 	}
 

@@ -6,6 +6,16 @@
 		font-size: 6rem;
 		padding-top: 6rem;
 		margin-bottom: 2rem;
+
+		@include respond(tab-port) {
+			margin-top: -10rem;
+			}
+
+		@include respond(phone) {
+			padding-top: 0;
+			}
+
+		
 		}
 	}
 

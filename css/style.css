@@ -100,7 +100,7 @@ body {
     .container {
       height: auto;
       font-size: 1rem;
-      margin-top: 25rem;
+      margin-top: 15rem;
       background-color: #22252C;
       color: #FFF7F0; } }
   .container--text {
@@ -447,6 +447,15 @@ so we add height to both.*/
   font-size: 6rem;
   padding-top: 6rem;
   margin-bottom: 2rem; }
+  @media (max-width: 56.25em) {
+    .heading-primary--main {
+      margin-top: -10rem; } }
+  @media (max-width: 37.5em) {
+    .heading-primary--main {
+      padding-top: 0; } }
+  @media (max-width: 112.5em) {
+    .heading-primary--main {
+      padding-top: 0; } }
 
 .paragraph {
   padding: 4rem 0 .5rem 2rem;
@@ -593,6 +602,7 @@ so we add height to both.*/
   clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%); }
   @media (max-width: 56.25em) {
     .section-about {
+      -webkit-clip-path: none;
       clip-path: none;
       margin-top: 0;
       background-color: #22252C;
@@ -615,6 +625,7 @@ so we add height to both.*/
   clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%); }
   @media (max-width: 56.25em) {
     .section-apps {
+      -webkit-clip-path: none;
       clip-path: none; } }
 
 .section-footer {
