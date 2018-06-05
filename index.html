@@ -6,7 +6,9 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="motion.min.css">
@@ -15,7 +17,21 @@
 </head>
 
 <body>
-            <section class="section-about">
+  <!-- <div class="navigation">
+    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+    <label for="navi-toggle" class="navigation__button">&nbsp;</label>
+    <div class="navigation__background">&nbsp;</div>
+    <nav class="navigation__nav">
+    <ul class="navigation__list">
+      <li class="navigation__item"><a href="#section-about" class="navigation__link">About</a> </li>
+       <li class="navigation__item"><a href="#section-projects" class="navigation__link">Clients</a> </li>
+        <li class="navigation__item"><a href="#section-apps" class="navigation__link">Web Apps</a> </li>
+        <li class="navigation__item"><a href="#section-footer" class="navigation__link">Let's Work</a> </li>
+    </ul>
+  </nav> -->
+  </div>
+  
+            <section class="section-about" id="section-about">
                 <div class="row">
                     <div class="col-1-of-2">
                         <div class="projects">
@@ -33,7 +49,7 @@
                       </div>
              </section>       
                
-            <section class="section-projects">
+            <section class="section-projects" id="section-projects">
                 <div class="projects-sub">
                      <div class="u-center-text u-margin-bottom-big">
                             <h2 class="heading-secondary">Clients</h2>
@@ -126,7 +142,7 @@
                                </div>
                         </div>
                 </section>
-    <section class="section-apps">
+    <section class="section-apps" id="section-apps">
         <div class="projects-sub">
             <div class="u-center-text u-margin-bottom-big">
                     <h2 class="heading-tertiary ">Web Apps</h2>
@@ -136,7 +152,7 @@
             <div class="col-1-of-4">
                 <div class="feature">
                    <div class="feature-box">
-                    <a href ="https://git.generalassemb.ly/pages/sharon/Project-1-Connect-4/">
+                    <a href ="https://git.generalassemb.ly/pages/sharon/Project-1-Connect-4/" class="feature-boc-link">
                        <div class="feature-box-picture feature-box-picture--1" data-text= "Match 4
                           Matching game - Javascript | Jquery | HTML | CSS">
                           </div>
@@ -147,7 +163,7 @@
             <div class="col-1-of-4">
                 <div class="feature">
                     <div class="feature-box">
-                     <a href="https://stunning-bryce-canyon-74350.herokuapp.com/">    
+                     <a href="https://stunning-bryce-canyon-74350.herokuapp.com/" class="feature-box-link">    
                           <div class="feature-box-picture feature-box-picture--2" data-text="Simovi 
                          Movie App 
                          - Node.js | Express | PG Promise, Axios | SQL | HTML/CSS | IMDB API">
@@ -184,7 +200,7 @@
 
     </section> 
  
-     <footer class="section-footer">
+<footer class="section-footer" id="section-footer">
                   <div class="section-footer__text-box">
                         <h2 class="heading-footer">I can build, update or refactor your current website!</h2>
                     </div>
@@ -195,14 +211,13 @@
                         </div> 
                    </div>
                    <div class="col-1-of-3">
-                      <div class = "social-box contact-me" >
+                      <div class = "social-box social-box__contact-me" >
                           <form action="mailto:sharonmoskal@gmail.com">
                           <input type="submit" name="send" class="email-submit btn-text" value="Get in touch"/>
                           </form>
                       </div>
                    </div>
-              
-                   <div class="col-1-of-3">
+                    <div class="col-1-of-3">
                        <div class="social-box github">
                           <a href = "https://github.com/sharonrm?tab=repositories" class = "social btn-text" target="_blank">Github</a>
                       </div>

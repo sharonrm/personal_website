@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(() => {
         console.log('script loaded');
 
 
@@ -7,6 +7,7 @@ $(document).ready(() => {
 	var $paragraph = $(".paragraph");
 
 	$aboutHover.hover(function(){
+		
 		$paragraph.addClass("type");
 
 	$(".type").typed({
@@ -20,12 +21,15 @@ $(document).ready(() => {
 		backdelay: 200,
 		loop: true
 	})
+			
+		// const $navigation = $('.navigation');
+		// const $navCheckbox = $('.navigation__checkbox');
+		// const $navItems = $('.navigation__item');
+		// $navItems.each((i, item) => 
 		
-	})
+		// 	item.click($navCheckbox.checked = false));
+		
+			});
+			
 
-
-
-
-
-
- }) // ends document.ready
+}) // ends document.ready

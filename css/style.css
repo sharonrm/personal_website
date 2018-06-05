@@ -3,6 +3,26 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 /*COLORS*/
 /*GRID*/
+/*
+
+Media Query Manager
+
+0-600px: PHONE
+600-900px: TAB-PORTRAIT
+900-1200px: TAB-LANDSCAPE
+[1200-1800]: normal style applied
+1800px+ : LARGE DESKTOP
+
+@breakpoint argument choices: 
+
+-phone
+-tab-port
+-tab-land
+-big-desktop
+
+1em = 16px
+
+*/
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +30,12 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -38,7 +64,7 @@ body {
   font-size: 4rem;
   text-transform: uppercase;
   font-weight: 700;
-  color: #fff;
+  color: #FCFCFF;
   letter-spacing: .3rem;
   transition: all .2s;
   text-align: center;
@@ -70,6 +96,13 @@ body {
   width: 50vw;
   background-color: #22252C;
   position: relative; }
+  @media (max-width: 56.25em) {
+    .container {
+      height: auto;
+      font-size: 1rem;
+      margin-top: 25rem;
+      background-color: #22252C;
+      color: #FFF7F0; } }
   .container--text {
     position: absolute;
     top: 0;
@@ -78,6 +111,9 @@ body {
     color: #fff;
     font-size: 2em;
     padding-top: 2em; }
+    @media (max-width: 56.25em) {
+      .container p {
+        padding-top: 0; } }
 
 .btn {
   /*need to add content or after element won't showup
@@ -91,6 +127,7 @@ body {
     transition: all .2s;
     position: relative; }
   .btn:hover {
+    -webkit-transform: translateY(-3px);
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(34, 37, 44, 0.2);
     /*opacity 0 basically sets something to hidden*/ }
@@ -98,6 +135,7 @@ body {
       transform: scaleX(1.4) scaleY(1.6);
       opacity: 0; }
   .btn:active {
+    -webkit-transform: translateY(-1px);
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba(34, 37, 44, 0.2); }
   .btn--white {
@@ -133,15 +171,21 @@ body {
   border-bottom: 1px solid #22252C;
   padding: 3px;
   transition: all 2s; }
+  @media (max-width: 56.25em) {
+    .btn-text:link, .btn-text:visited {
+      color: #FFF7F0;
+      border-bottom: 1.5px solid #FFF7F0; } }
 
 .btn-text:hover {
   background-color: #22252C;
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(34, 37, 44, 0.15);
+  -webkit-transform: translateY(-2px);
   transform: translateY(-2px); }
 
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(34, 37, 44, 0.15);
+  -webkit-transform: translateY(0);
   transform: translateY(0); }
 
 .composition {
@@ -210,18 +254,18 @@ body {
 
 .card {
   perspective: 150rem;
+  -webkit-perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 50rem;
-  /*
--180deg will move this in the opposite direction*/ }
+  height: 50rem; }
   .card__side {
     height: 50rem;
-    transition: all .8s ease;
+    transition: all 1s ease;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba(34, 37, 44, 0.15);
@@ -237,8 +281,10 @@ body {
       .card__side--back-3 {
         background-image: linear-gradient(to right bottom, #C199F5, #3f3250); }
   .card:hover .card__side--front {
+    -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
+    -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg); }
   .card__picture {
     background-size: cover;
@@ -299,9 +345,30 @@ body {
     color: #fff;
     font-size: 1.4rem;
     text-transform: uppercase; }
-  .card__price-value {
-    font-size: 6rem;
-    font-weight: 100; }
+  @media (max-width: 56.25em) {
+    .card {
+      height: auto;
+      border-radius: 3px;
+      background-color: #fff;
+      box-shadow: 0 1.5rem 4rem rgba(34, 37, 44, 0.15); }
+      .card__side {
+        height: auto;
+        position: relative;
+        box-shadow: none; }
+        .card__side--back {
+          transform: rotateY(0);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); }
+      .card:hover .card__side--front {
+        transform: rotateY(0); }
+      .card__details {
+        padding: 1rem 3rem; }
+      .card__cta {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        width: 100%;
+        padding: 7rem 4rem 4rem 4rem; } }
 
 /*card/hover then card__side will transform. The effect goes on the parent*/
 /*we added the height of 50rem to both parent and child b/c one card collapsed when
@@ -322,15 +389,18 @@ so we add height to both.*/
     box-shadow: 0 1.5rem 4rem rgba(34, 37, 44, 0.15);
     position: absolute;
     overflow: hidden; }
+    @media (max-width: 56.25em) {
+      .feature-box {
+        margin-left: 10rem; } }
     .feature-box-picture {
       background-size: 100%;
       background-repeat: no-repeat;
       height: 24rem;
       width: 100%;
       position: relative; }
-      .feature-box-picture:hover {
+      .feature-box-picture:hover, .feature-box-picture:active {
         background-size: 115%; }
-        .feature-box-picture:hover::after {
+        .feature-box-picture:hover::after, .feature-box-picture:active::after {
           position: absolute;
           top: 100%;
           bottom: 0;
@@ -341,16 +411,16 @@ so we add height to both.*/
           background-color: rgba(34, 37, 44, 0.9);
           color: #fff;
           content: attr(data-text); }
-        .feature-box-picture:hover:hover:after {
+        .feature-box-picture:hover:hover:after, .feature-box-picture:active:hover:after {
           top: 0;
           padding: .7rem;
           background-color: rgba(34, 37, 44, 0.6); }
-        .feature-box-picture:hover:first-line {
+        .feature-box-picture:hover:first-line, .feature-box-picture:active:first-line {
           color: #fff;
           font-weight: bold;
           font-size: 300%;
           float: left; }
-        .feature-box-picture:hover:second-line {
+        .feature-box-picture:hover:second-line, .feature-box-picture:active:second-line {
           font-weight: bold;
           font-size: 2rem; }
       .feature-box-picture--1 {
@@ -364,6 +434,13 @@ so we add height to both.*/
 
 .social-box {
   margin: 5rem 0rem 0 10rem; }
+  .social-box__contact-me {
+    border: none;
+    cursor: pointer; }
+  @media (max-width: 56.25em) {
+    .social-box {
+      margin: 0 auto;
+      text-align: center; } }
 
 .heading-primary--main {
   display: inline-block;
@@ -380,6 +457,13 @@ so we add height to both.*/
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 3rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     content: " ";
     display: table;
@@ -388,26 +472,140 @@ so we add height to both.*/
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 3rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc(100% / 2); }
   .row .col-1-of-3 {
     width: calc((100% - 2 * 6rem) / 3); }
+    @media (max-width: 56.25em) {
+      .row .col-1-of-3 {
+        margin-right: 0;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        width: 100%; } }
 
 .col-1-of-4 {
   width: calc((100% - 3 * 6rem) / 4); }
+
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  background-color: #FFF7F0;
+  height: 6.5rem;
+  width: 6.5rem;
+  position: fixed;
+  top: .5rem;
+  right: 1.5rem;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(34, 37, 44, 0.1);
+  text-align: center;
+  cursor: pointer; }
+  @media (max-width: 56.25em) {
+    .navigation__button {
+      right: 6.5rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__button {
+      right: 5.5rem; } }
+  @media (max-width: 112.5em) {
+    .navigation__button {
+      right: 5.5rem; } }
+
+.navigation__background {
+  height: 5.5rem;
+  width: 5.5rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  z-index: 1000;
+  background-image: radial-gradient(#ffbac4, #E14658);
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  @media (max-width: 56.25em) {
+    .navigation__background {
+      right: 7rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__background {
+      right: 6.5rem; } }
+  @media (max-width: 112.5em) {
+    .navigation__background {
+      right: 6.5rem; } }
+
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%; }
+
+.navigation__item {
+  margin: 1rem; }
+
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: #FFF7F0;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  text-decoration: none;
+  text-transform: uppercase;
+  background-size: 220%;
+  transition: all .4s; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #FFF7F0;
+  transform: translate(1rem); }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%; }
 
 .section-about {
   background-size: cover;
   background-color: #FFF7F0;
   padding: 10rem 0 25rem 0;
   margin-top: -10rem;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%); }
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%); }
+  @media (max-width: 56.25em) {
+    .section-about {
+      clip-path: none;
+      margin-top: 0;
+      background-color: #22252C;
+      color: #FFF7F0; } }
 
 .section-projects {
   background-color: #FCFCFF;
   padding: 25rem 0 30rem 0;
   margin-top: -19rem; }
+  @media (max-width: 56.25em) {
+    .section-projects {
+      padding-top: 5rem;
+      background-color: #FCFCFF; } }
 
 .section-apps {
   background-color: #22252C;
@@ -415,14 +613,26 @@ so we add height to both.*/
   padding: 25rem 0 30rem 0;
   -webkit-clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
   clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%); }
+  @media (max-width: 56.25em) {
+    .section-apps {
+      clip-path: none; } }
 
 .section-footer {
   background-color: #FFF7F0;
   padding: 20rem 0 20rem 0;
   margin-top: -20rem;
   height: 35rem; }
+  @media (max-width: 56.25em) {
+    .section-footer {
+      height: auto;
+      background-color: #E14658;
+      padding: 0 10rem 0 10rem; } }
   .section-footer__text-box {
     text-align: center; }
+    @media (max-width: 56.25em) {
+      .section-footer__text-box {
+        margin-top: -10rem;
+        font-size: 2rem; } }
 
 .description {
   margin-top: 10%;
@@ -432,16 +642,22 @@ so we add height to both.*/
 
 input, .submit .email-submit {
   cursor: pointer;
+  display: inline-block;
   background: none;
   padding: .5rem;
-  color: inherit;
-  border: none;
+  color: #22252C;
+  border-right: none;
+  border-left: none;
+  border-top: none;
   font-size: 1.5rem;
   outline: none;
-  border-style: solid; }
+  border-bottom: 1.5px solid #22252C; }
+  @media (max-width: 56.25em) {
+    input, .submit .email-submit {
+      color: #FFF7F0;
+      border-bottom: 1.5px solid #FFF7F0; } }
   input:link, input:visited, .submit .email-submit:link, .submit .email-submit:visited {
     display: inline-block;
-    border-bottom: 1px solid #22252c;
     padding: 3px;
     transition: all 2s; }
   input:hover, .submit .email-submit:hover {
@@ -457,21 +673,3 @@ input, .submit .email-submit {
   text-decoration: none;
   color: #22252c;
   font-size: 1.5rem; }
-
-@media only screen and (max-width: 800px) {
-  body {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-  .title {
-    font-size: 1.8rem; }
-  .description {
-    font-size: 1.2rem;
-    margin-left: 1rem;
-    margin-right: 1rem; }
-  p {
-    font-size: 1.2rem; }
-  img {
-    display: none; }
-  h2 {
-    font-size: 1.8rem; } }

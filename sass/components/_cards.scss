@@ -2,6 +2,7 @@
 
 	//FUNCTIONALITY
 perspective: 150rem;
+-webkit-perspective: 150rem;
 -moz-perspective: 150rem;
 position: relative;
 height: 50rem;
@@ -9,11 +10,12 @@ height: 50rem;
 
 &__side {
 	height: 50rem;
-	transition: all .8s ease;
+	transition: all 1s ease;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
+	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	border-radius: 3px;
 	box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
@@ -40,13 +42,14 @@ height: 50rem;
 		}
 	}
 }
-/*
--180deg will move this in the opposite direction*/
+
 
 &:hover &__side--front {
+	-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
 	}
 &:hover &__side--back{
+	-webkit-transform: rotateY(0deg);
 	transform: rotateY(0deg);
 	}
 
@@ -148,17 +151,47 @@ height: 50rem;
 			text-transform: uppercase;
 		}
 
-		&__price-only{
-			
-		}
 
-		&__price-value{
-			font-size: 6rem;
-			font-weight: 100;
-		}
+				@include respond(tab-port) {
+					height: auto;
+					border-radius: 3px;
+					background-color: $color-white;
+					box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+					&__side {
+						height: auto;
+						position: relative;
+						box-shadow: none;
+
+						&--back {
+							transform: rotateY(0);
+							clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+						}
+					}
+					&:hover &__side--front {
+						transform: rotateY(0);
+					}
+
+					&__details {
+						padding: 1rem 3rem;
+					} 
+					
+					//BACK SIDE STYLING
+					&__cta {
+						position: relative;
+						top: 0;
+						left: 0;
+						transform: translate(0, 0);
+						width: 100%;
+						padding: 7rem 4rem 4rem 4rem;
+					}
+
+				}
 }
 /*card/hover then card__side will transform. The effect goes on the parent*/
 /*we added the height of 50rem to both parent and child b/c one card collapsed when
 it was placed on top of one another so with absolute positioning you can't use clearfix
 so we add height to both.*/
+
+
 

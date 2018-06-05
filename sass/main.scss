@@ -20,6 +20,7 @@
 
 @import"layout/header";
 @import"layout/grid";
+@import"layout/navigation";
 
 @import"pages/home";
 
@@ -37,19 +38,28 @@
 input, .submit .email-submit {
 
 
-    cursor: pointer;
+	cursor: pointer;
+	display: inline-block;
     background: none;
     padding: .5rem;
-    color: inherit;
-    border: none;
+    color: $color-primary;
+	border-right: none;
+	border-left:none;
+	border-top: none;
     font-size: 1.5rem;
     outline: none;
-    border-style: solid;
+	border-bottom: 1.5px solid $color-primary;
+
+	@include respond(tab-port){
+		color: $color-grey-light-1;
+		border-bottom: 1.5px solid $color-grey-light-1;
+
+	}
 
     
 		&:link, &:visited {
 			display: inline-block;
-    		border-bottom: 1px solid $color-black;
+    		
 			padding: 3px;
 			transition: all 2s;
 
@@ -77,24 +87,3 @@ input, .submit .email-submit {
 }
 
 
-@media only screen and (max-width: 800px) {
- body {
-
-  	background-position: center center;
-  	background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .title { font-size: 1.8rem;}
-  .description {font-size: 1.2rem;
-  				margin-left: 1rem;
-				margin-right: 1rem;}
-  p {font-size: 1.2rem;}
-  img {
-	
-	display: none;
-}
-
-h2 {
-	font-size: 1.8rem;
-}
-}

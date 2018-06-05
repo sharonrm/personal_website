@@ -1,3 +1,14 @@
 .social-box {
 	margin: 5rem 0rem 0 10rem;
+
+	&__contact-me{
+		border: none;
+		cursor: pointer;
+	}
+
+	@include respond(tab-port){
+		margin: 0 auto;
+		text-align: center;
+		
+	}
 } 

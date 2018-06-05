@@ -4,16 +4,33 @@
 	background-color: $color-primary;
 	position: relative;
 
+	@include respond(tab-port){
+		height: auto;
+		font-size: 1rem;
+		margin-top: 25rem;
+		background-color: $color-primary;
+		color: $color-grey-light-1;
+	}
+
 	&--text{
 		position: absolute;
 		top: 0;
 		right: 0;
+
+	
 		}
+
+	
 
 	p{
 		color: $color-white;
 		font-size: 2em;
 		padding-top: 2em;
+
+		@include respond(tab-port) {
+			
+			padding-top: 0;
+		}
 	}
 }
 	

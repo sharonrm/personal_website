@@ -2,8 +2,6 @@
 	position: relative;
 	height: 24rem;
 
-
-
 &-box {
 	height: 24rem;
 	width: 24rem;
@@ -16,17 +14,29 @@
 	box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 	position: absolute;
 	overflow: hidden;
-	
+
+	@include respond(tab-port) {
+		margin-left: 10rem;
+	}
+
+	&-link {
+		
+	} 
+
 	&-picture {
 				background-size: 100%;
 				background-repeat: no-repeat;
 				height: 24rem;
 				width: 100%;
 				position: relative;
-				
 
-			&:hover {
+				
+				
+			
+			&:hover,
+			&:active {
 				background-size: 115%;
+				
 
 				&::after{
 					position: absolute;
@@ -40,13 +50,14 @@
 					color: $color-white;
 					content: attr(data-text);
 					
+					
 				}
 
 				&:hover:after{
 					top: 0;
 					padding: .7rem;
 					background-color: rgba($color-black, .60);
-
+					
 				}
 
 				&:first-line{
